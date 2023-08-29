@@ -46,3 +46,10 @@ $logar->setSenha("123456");
 $logar->logar();
 echo "</br>";
 echo $logar->getEmail();
+echo "</br>";
+
+include "./construtor.php";
+
+$dadosPessoais = new dados($logar->getEmail(), $logar->getSenha());
+
+echo $dadosPessoais->dadosSenha();
